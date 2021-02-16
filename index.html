@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Cloudinary Asset Selector</title>
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="custom-element.css" />
-    <link rel="stylesheet" href="cloudinary-selector.css" />
-    <!-- Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-    <script src="https://app.kontent.ai/js-api/custom-element/v1/custom-element.min.js"></script>
-    <script src="https://media-library.cloudinary.com/global/all.js"></script>
-    <script src="cloudinary-selector.js"></script>
-  </head>
-  <body>
-    <!-- Custom element HTML -->
-    <div class="selector">
-      <button class="clear btn btn--destructive" type="button">
-        <i class="icon-clear-filter btn__icon" aria-hidden="true"></i>
-        <span>Clear</span>
-      </button>
-      <button id="open-btn"></button>
-      <img
-        class="logo"
-        src="cloudinary_logo.png"
-        alt="Cloudinary"
-        title="Cloudinary"
-      />
-    </div>
-    <div class="spacer"></div>
-    <div class="title">
-      <div class="text"></div>
-    </div>
-    <div class="selected"></div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Cloudinary Asset Selector</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css"
+    href="https://kentico.github.io/kontent-custom-element-samples/shared/custom-element.css">
+  <link rel="stylesheet" href="src/cloudinary-selector.css" />
+  <!-- Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+  <script src="https://app.kontent.ai/js-api/custom-element/v1/custom-element.min.js"></script>
+  <script src="https://media-library.cloudinary.com/global/all.js"></script>
+  <script src="src/cloudinary-selector.js"></script>
+</head>
+
+<body>
+  <!-- Custom element HTML -->
+  <div class="selector">
+    <button class="clear btn btn--destructive" type="button">
+      <i class="icon-clear-filter btn__icon" aria-hidden="true"></i>
+      <span>Clear</span>
+    </button>
+    <button id="open-btn"></button>
+    <img class="logo" src="src/cloudinary_logo.png" alt="Cloudinary" title="Cloudinary" />
+  </div>
+  <div class="spacer"></div>
+  <div class="title">
+    <div class="text"></div>
+  </div>
+  <div class="selected"></div>
+</body>
+
 </html>
