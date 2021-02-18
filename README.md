@@ -31,10 +31,10 @@ This [custom element](https://docs.kontent.ai/tutorials/develop-apps/integrate/i
 
 ## Features
 
-- Editors can
+- Editors are able to
   - Search for assets in their Cloudinary Asset Library
   - Link selected assets with their content items with preview directly inside of the Kontent editor
-  - Upload & Manage assets directly through from the Kontent editor
+  - Upload & Manage assets directly through the widget from the Kontent editor
   
 
 ## Demo
@@ -48,7 +48,7 @@ Netlify has made this easy. If you click the deploy button below, it will guide 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Kentico/kontent-custom-element-cloudinary)
 
 ## Cloudinary setup
-The integration uses [the official Media Library Widget by Cloudinary](https://cloudinary.com/documentation/media_library_widget). In order to access your asset library you'll need a Cloud Name and an API Key for the widget. 
+The integration uses [the official Media Library Widget by Cloudinary](https://cloudinary.com/documentation/media_library_widget). In order to access your asset library you'll need a Cloud Name and an API Key. 
 
 ### Getting the Cloudinary Cloud Name
 The Cloud Name can be found inside of the **Settings** section in your Cloudinary application. Under the **Account** subsection you'll find the **Cloudinary cloud name** at the bottom of the page.
@@ -59,10 +59,11 @@ The Cloud Name can be found inside of the **Settings** section in your Cloudinar
 Subsequently, you'll have to create an API key for the the widget. You'll find that option in the **Settings** section under the **Security** tab as shown on the image below.
 ![Create new Api client](docs/cloudinary_setup01.png)
 At the bottom of the page you'll find a section called **Acess Keys**. There might be a key already generated for you, otherwise, you'll have to generate a new one through the **Generate New Pair**. This will create a new API Key and an API Secret, but only the Key will be neccessary for the custom element to work.
-![Create new Api client 2](docs/cloudinary_setup02.png)
+![Create new Api client 2](docs/cloudinary_setup02.png) option.
 
 ## Configuring the Custom Element
-You will need to add the custom element to a content type filling in the hosted code URL and the following JSON parameters:
+The section above explains how to find values for the below mentioned parameters in the Cloudinary application. 
+You will need to add the custom element to a content type filling in the hosted code URL and the JSON parameters as follows:
 
 ```
 {
@@ -70,10 +71,10 @@ You will need to add the custom element to a content type filling in the hosted 
     "apiKey": "<YOUR API KEY>"
 }
 ```
-The section above explains how to find values for the parameters in the Cloudinary application. 
 
 ## What is Saved
-Assets selected from Cloudinary are saved as an array of objects.
+Assets selected from Cloudinary are saved as an array of objects into the value of the custom element. This is also the format they will be delivered as through the Kontent's Delivery API.
+
 More details about the individual properties can be found [in the official Cloudinary documentation](https://cloudinary.com/documentation/media_library_widget).
 
 Example custom element value:
@@ -107,13 +108,13 @@ Example custom element value:
 ```
 
 ## Contributors
-We have collected notes on how to contribute to this project in [CONTRIBUTING.md](CONTRIBUTING.md).
-
-Originally created by <a href="https://www.truelime.nl/">TrueLime</a>
+This custom element was originally created by <a href="https://www.truelime.nl/">TrueLime</a>.
 
 <a href="https://github.com/Kentico/kontent-custom-element-cloudinary/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Kentico/kontent-custom-element-cloudinary" />
 </a>
+
+We have collected notes on how to contribute to this project in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
