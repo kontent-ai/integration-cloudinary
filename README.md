@@ -124,8 +124,8 @@ We have collected notes on how to contribute to this project in [CONTRIBUTING.md
 
 - [Custom Element Gallery on github](https://kentico.github.io/kontent-custom-element-samples/gallery/)
 - [Kontent's Integration documentation](https://kontent.ai/learn/tutorials/develop-apps/integrate/integrations-overview)
-- [Custom Element documentation]((https://kontent.ai/learn/tutorials/develop-apps/integrate/content-editing-extensions)
-- [Custom Element API reference]((https://kontent.ai/learn/reference/custom-elements-js-api)
+- [Custom Element documentation](https://kontent.ai/learn/tutorials/develop-apps/integrate/content-editing-extensions)
+- [Custom Element API reference](https://kontent.ai/learn/reference/custom-elements-js-api)
 
 
 
