@@ -123,6 +123,7 @@ function initCustomElement() {
         {
           cloud_name: config.cloudName,
           api_key: config.apiKey,
+          default_transformations: config.defaultTransformations,
           button_class: "btn btn--primary",
           button_caption: "Select Assets",
         },
