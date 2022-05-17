@@ -126,6 +126,12 @@ function initCustomElement() {
           default_transformations: config.defaultTransformations,
           button_class: "btn btn--primary",
           button_caption: "Select Assets",
+          integration: {
+            type: "kontentai_connector",
+            platform: "kontent_custom_element 1.0",
+            version: "1.0",
+            environment: "prod"
+          }            
         },
         {
           insertHandler: function (data) {
