@@ -1,37 +1,40 @@
-var config = null;
 var currentValue = null;
 var isDisabled = true;
+var config = null;
 
 function updateDisabled(disabled) {
-  const elements = $(".selector").add(".remove").add(".spacer");
+  const enabledElements = $(".selector").add(".remove");
   if (disabled) {
-    elements.hide();
-  } else {
-    elements.show();
+    enabledElements.hide();
   }
+  else {
+    enabledElements.show();  
+  }
+  
   isDisabled = disabled;
-  updateSize();
+}
+
+function updateSize() {
+  const height = Math.max($("html").height(), document.body.offsetHeight, 100);
+  CustomElement.setHeight(height + 30);
+}
+
+function remove(id) {
+  const images = currentValue || [];
+  const newImages = images.filter(image => image.public_id !== id);
+  updateValue(newImages);
 }
 
 function renderSelected(images) {
   const $selected = $(".selected").empty();
-  const $titleText = $(".title").find(".text");
-  const $clear = $(".btn--destructive").hide();
-
+  console.log(images);
   if (images && images.length) {
-    $titleText.text("Selected images");
-    $titleText.addClass("title--selected");
-    $clear.show();
-
     for (var i = 0; i < images.length; i++) {
       const image = images[i];
-      if (image && image.public_id) {
-        imageTile($selected, image);
+      if (image) {
+        imageTile($selected, image, remove);
       }
     }
-  } else {
-    $titleText.text("No assets selected");
-    $titleText.removeClass("title--selected");
   }
   updateSize();
 }
@@ -43,7 +46,8 @@ function updateValue(images) {
       currentValue = images;
       CustomElement.setValue(JSON.stringify(images));
       renderSelected(images);
-    } else {
+    }
+    else {
       currentValue = null;
       CustomElement.setValue(null);
       renderSelected(null);
@@ -51,67 +55,42 @@ function updateValue(images) {
   }
 }
 
-function remove(public_id) {
-  const images = currentValue || [];
-  const newImages = images.filter((image) => image.public_id !== public_id);
-
-  updateValue(newImages);
-}
-
-function imageTile($parent, item) {
-  const $tile = $(
-    `<div class="tile" title="${item.public_id}"></div>`
-  ).appendTo($parent);
-
-  const $actions = $('<div class="actions"></div>').appendTo($tile);
-
-  $(
-    `<div class="action remove" title="Remove"><i class="icon-remove"></i></div>`
-  )
-    .appendTo($actions)
-    .click(function () {
-      remove(item.public_id);
-    });
+function imageTile($parent, item, remove) {
+  const $tile = $(`<div class="asset-thumbnail"></div>`).appendTo($parent);
+  const $tileInside = $(`<div class="asset-preview"></div>`).appendTo($tile);
+  const $actions = $('<div class="asset-thumbnail__actions-pane"></div>').appendTo($tileInside);
 
   if (item.secure_url) {
-    const $preview = $('<div class="preview"></div>').appendTo($tile);
-
-    $('<img draggable="false" class="thumbnail" />')
-      .attr("src", item.secure_url)
-      .appendTo($preview)
-      .on("load", updateSize);
-  } else {
-    $('<div class="noimage">No image available</div>').appendTo($tile);
+    $(`<a class="action" title="Download" href="${item.secure_url}" target="_blank"><i class="icon-arrow-down-line"></i></a>`).appendTo($actions);
+    $(`<a class="remove" title="Remove"><i class="icon-times"></i></a>`).appendTo($actions).click(function () {remove(item.public_id);});
+    $(`<a href="${item.secure_url}" target="_blank"><img class="asset-thumbnail__image" src="${item.secure_url}" /></a>`).appendTo($tileInside).on('load', updateSize);
+  }
+  else {
+    $(`<a class="remove" title="Remove"><i class="icon-times"></i></a>`).appendTo($actions).click(function () {remove(item.public_id);});
+    $('<div class="noimage">No image available</div>').appendTo($tileInside);
   }
 
-  const $info = $(`<div class="info"></div>`).appendTo($tile);
-  $(`<div class="name">${item.public_id}</div>`).appendTo($info);
-
-  updateSize();
+  $(`<div class="asset-thumbnail__bottom">${item.public_id}</div>`).appendTo($tileInside);
 }
 
 function setupSelector(value) {
-  $(".clear").click(function () {
-    updateValue(null);
-  });
-
   if (value) {
     currentValue = JSON.parse(value);
     renderSelected(currentValue);
-  } else {
+  }
+  else {
     renderSelected(null);
   }
   // Reacts to window resize to adjust the height
   window.addEventListener("resize", updateSize);
 }
 
-function updateSize() {
-  // Update the custom element height in the Kentico UI.
-  const height = isDisabled
-    ? Math.ceil($("html").height())
-    : window.screen.height - 300;
-
-  CustomElement.setHeight(height);
+function updateSize(val) {
+  let height = Math.max($("html").height(), document.body.offsetHeight, 100);
+  if(val){
+    height = val;
+  }
+  CustomElement.setHeight(height + 30);
 }
 
 function initCustomElement() {
@@ -123,9 +102,9 @@ function initCustomElement() {
         {
           cloud_name: config.cloudName,
           api_key: config.apiKey,
-          default_transformations: config.defaultTransformations,
-          button_class: "btn btn--primary",
-          button_caption: "Select Assets",
+          button_class: "btn btn--tertiary",
+          button_caption: "pick from assets",
+          multiple: true,
           integration: {
             type: "kontentai_connector",
             platform: "kontent_custom_element 1.0",
@@ -137,9 +116,19 @@ function initCustomElement() {
           insertHandler: function (data) {
             updateValue(data.assets);
           },
+          showHandler: function() {
+            updateSize(800);
+          },
+          hideHandler: function() {
+            updateSize();
+          }
         },
-        document.getElementById("open-btn")
+        "#open-btn"
       );
+
+      if(config.defaultTransformations) {
+        window.ml.default_transformations = config.defaultTransformations;
+      }
 
       setupSelector(element.value);
       updateDisabled(element.disabled);
@@ -156,4 +145,8 @@ function initCustomElement() {
   }
 }
 
-initCustomElement();
+$(document).ready(function () {
+  initCustomElement();
+});
+
+
