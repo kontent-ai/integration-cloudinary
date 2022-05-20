@@ -85,14 +85,6 @@ function setupSelector(value) {
   window.addEventListener("resize", updateSize);
 }
 
-function updateSize(val) {
-  let height = Math.max($("html").height(), document.body.offsetHeight, 100);
-  if(val){
-    height = val;
-  }
-  CustomElement.setHeight(height + 30);
-}
-
 function initCustomElement() {
   try {
     CustomElement.init((element, _context) => {
