@@ -48,7 +48,7 @@ Netlify has made this easy. If you click the deploy button below, it will guide 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Kentico/kontent-custom-element-cloudinary)
 
 ## Cloudinary setup
-The integration uses [the official Media Library Widget by Cloudinary](https://cloudinary.com/documentation/media_library_widget). In order to access your asset library you'll need a Cloud Name and an API Key. 
+The integration uses **[the official Media Library Widget by Cloudinary](https://cloudinary.com/documentation/media_library_widget)**. In order to access your asset library you'll need a Cloud Name and an API Key. 
 
 ### Getting the Cloudinary Cloud Name
 The Cloud Name can be found inside of the **Settings** section in your Cloudinary application. Under the **Account** subsection you'll find the **Cloudinary cloud name** at the bottom of the page.
@@ -63,12 +63,13 @@ At the bottom of the page you'll find a section called **Acess Keys**. There mig
 
 ## Configuring the Custom Element
 The section above explains how to find values for the below mentioned parameters in the Cloudinary application. 
-You will need to add the custom element to a content type filling in the hosted code URL and the JSON parameters as follows:
+You will need to add the custom element to a content type filling in the hosted code URL and the JSON parameters as follows (*defaultTransformations* is an optional parameter):
 
 ```
 {
     "cloudName": "<YOUR CLOUDINARY CLOUD NAME>",
-    "apiKey": "<YOUR API KEY>"
+    "apiKey": "<YOUR API KEY>",
+    "defaultTransformations": "<TRANSFORMATIONS>"
 }
 ```
 
@@ -145,4 +146,4 @@ We have collected notes on how to contribute to this project in [CONTRIBUTING.md
 [gallery-shield]: https://img.shields.io/static/v1?label=&message=extension%20gallery&color=51bce0&style=for-the-badge
 [stack-shield]: https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white&style=for-the-badge
 [discussion-shield]: https://img.shields.io/badge/GitHub-Discussions-FE7A16.svg?logo=github&style=for-the-badge
-[product-demo]: docs/demo.gif?raw=true
+[product-demo]: docs/cloudinary.gif?raw=true
