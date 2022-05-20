@@ -15,7 +15,7 @@ function updateDisabled(disabled) {
 }
 
 function updateSize() {
-  const height = Math.max($("html").height(), document.body.offsetHeight, 100);
+  const height = Math.ceil(Math.max($("html").height(), document.body.offsetHeight, 100));
   CustomElement.setHeight(height + 30);
 }
 
