@@ -14,11 +14,6 @@ function updateDisabled(disabled) {
   isDisabled = disabled;
 }
 
-function updateSize() {
-  const height = Math.ceil(Math.max($("html").height(), document.body.offsetHeight, 100));
-  CustomElement.setHeight(height + 30);
-}
-
 function remove(id) {
   const images = currentValue || [];
   const newImages = images.filter(image => image.public_id !== id);
@@ -83,6 +78,14 @@ function setupSelector(value) {
   }
   // Reacts to window resize to adjust the height
   window.addEventListener("resize", updateSize);
+}
+
+function updateSize(val) {
+  let height = Math.ceil(Math.max($("html").height(), document.body.offsetHeight, 100));
+  if(val){
+    height = val;
+  }
+  CustomElement.setHeight(height + 30);
 }
 
 function initCustomElement() {
