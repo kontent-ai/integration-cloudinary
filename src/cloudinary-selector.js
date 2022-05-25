@@ -22,7 +22,6 @@ function remove(id) {
 
 function renderSelected(images) {
   const $selected = $(".selected").empty();
-  console.log(images);
   if (images && images.length) {
     for (var i = 0; i < images.length; i++) {
       const image = images[i];
