@@ -93,20 +93,27 @@ function initCustomElement() {
     CustomElement.init((element, _context) => {
       // Setup with initial value and disabled state
       config = element.config || {};
+      
+      let settings = {
+        cloud_name: config.cloudName,
+        api_key: config.apiKey,
+        button_class: "btn btn--tertiary",
+        button_caption: "pick from assets",
+        multiple: true,
+        integration: {
+          type: "kontentai_connector",
+          platform: "kontent_custom_element 1.0",
+          version: "1.0",
+          environment: "prod"
+        }            
+      };
+      
+      if(config.defaultTransformations) {
+        settings.default_transformations = config.defaultTransformations;
+      }      
+
       window.ml = cloudinary.createMediaLibrary(
-        {
-          cloud_name: config.cloudName,
-          api_key: config.apiKey,
-          button_class: "btn btn--tertiary",
-          button_caption: "pick from assets",
-          multiple: true,
-          integration: {
-            type: "kontentai_connector",
-            platform: "kontent_custom_element 1.0",
-            version: "1.0",
-            environment: "prod"
-          }            
-        },
+        settings,
         {
           insertHandler: function (data) {
             updateValue(data.assets);
@@ -120,10 +127,6 @@ function initCustomElement() {
         },
         "#open-btn"
       );
-
-      if(config.defaultTransformations) {
-        window.ml.default_transformations = config.defaultTransformations;
-      }
 
       setupSelector(element.value);
       updateDisabled(element.disabled);
