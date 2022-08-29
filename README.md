@@ -11,7 +11,7 @@
 [![GitHub Discussions][discussion-shield]](https://github.com/Kentico/Home/discussions)
 
 <p align="center">
-<image src="docs/kk-logo.svg" alt="kontent logo" width="200" />
+<image src="docs/kk-logo.svg" alt="Kontent.ai logo" width="200" />
 <image src="docs/cloudinary_logo.png" 
 alt="cloudinary logo" width="400">
 </p>
@@ -27,14 +27,14 @@ alt="cloudinary logo" width="400">
   <a href="#additional-resources">Resources</a>
 </p>
 
-This [custom element](https://kontent.ai/learn/tutorials/develop-apps/integrate/content-editing-extensions) extension for [Kontent by Kentico](https://kontent.ai) allows users to link selected assets from their [Cloudinary](https://cloudinary.com/) asset library into their structured content. It also provides editors with the ability to upload and manage their assets directly through the extension.
+This [custom element](https://kontent.ai/learn/tutorials/develop-apps/integrate/content-editing-extensions) extension for [Kontent.ai](https://kontent.ai) allows users to link selected assets from their [Cloudinary](https://cloudinary.com/) asset library into their structured content. It also provides editors with the ability to upload and manage their assets directly through the extension.
 
 ## Features
 
 - Editors are able to
   - Search for assets in their Cloudinary Asset Library
-  - Link selected assets with their content items with preview directly inside of the Kontent editor
-  - Upload & Manage assets directly through the widget from the Kontent editor
+  - Link selected assets with their content items with preview directly inside of the Kontent.ai editor
+  - Upload & Manage assets directly through the widget from the Kontent.ai editor
   
 
 ## Demo
@@ -45,7 +45,7 @@ This [custom element](https://kontent.ai/learn/tutorials/develop-apps/integrate/
 
 Netlify has made this easy. If you click the deploy button below, it will guide you through the process of deploying it to Netlify and leave you with a copy of the repository in your account as well.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Kentico/kontent-custom-element-cloudinary)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kontent-ai/kontent-custom-element-cloudinary)
 
 ## Cloudinary setup
 The integration uses **[the official Media Library Widget by Cloudinary](https://cloudinary.com/documentation/media_library_widget)**. In order to access your asset library you'll need a Cloud Name and an API Key. 
@@ -74,7 +74,7 @@ You will need to add the custom element to a content type filling in the hosted 
 ```
 
 ## What is Saved
-Assets selected from Cloudinary are saved as an array of objects into the value of the custom element. This is also the format they will be delivered as through the Kontent's Delivery API.
+Assets selected from Cloudinary are saved as an array of objects into the value of the custom element. This is also the format they will be delivered as through the Kontent.ai Delivery API.
 
 More details about the individual properties can be found [in the official Cloudinary documentation](https://cloudinary.com/documentation/media_library_widget).
 
@@ -111,8 +111,8 @@ Example custom element value:
 ## Contributors
 This custom element was originally created by <a href="https://www.truelime.nl/">TrueLime</a>.
 
-<a href="https://github.com/Kentico/kontent-custom-element-cloudinary/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Kentico/kontent-custom-element-cloudinary" />
+<a href="https://github.com/kontent-ai/kontent-custom-element-cloudinary/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=kontent-ai/kontent-custom-element-cloudinary" />
 </a>
 
 We have collected notes on how to contribute to this project in [CONTRIBUTING.md](CONTRIBUTING.md).
@@ -124,24 +124,24 @@ We have collected notes on how to contribute to this project in [CONTRIBUTING.md
 ## Additional Resources
 
 - [Custom Element Gallery on github](https://kentico.github.io/kontent-custom-element-samples/gallery/)
-- [Kontent's Integration documentation](https://kontent.ai/learn/tutorials/develop-apps/integrate/integrations-overview)
+- [Kontent.ai Integration documentation](https://kontent.ai/learn/tutorials/develop-apps/integrate/integrations-overview)
 - [Custom Element documentation](https://kontent.ai/learn/tutorials/develop-apps/integrate/content-editing-extensions)
 - [Custom Element API reference](https://kontent.ai/learn/reference/custom-elements-js-api)
 
 
 
 
-[last-commit]: https://img.shields.io/github/last-commit/Kentico/kontent-custom-element-cloudinary?style=for-the-badge
-[contributors-shield]: https://img.shields.io/github/contributors/Kentico/kontent-custom-element-cloudinary.svg?style=for-the-badge
-[contributors-url]: https://github.com/Kentico/kontent-custom-element-cloudinary/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Kentico/kontent-custom-element-cloudinary.svg?style=for-the-badge
-[forks-url]: https://github.com/Kentico/kontent-custom-element-cloudinary/network/members
-[stars-shield]: https://img.shields.io/github/stars/Kentico/kontent-custom-element-cloudinary.svg?style=for-the-badge
-[stars-url]: https://github.com/Kentico/kontent-custom-element-cloudinary/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Kentico/kontent-custom-element-cloudinary.svg?style=for-the-badge
-[issues-url]: https://github.com/Kentico/kontent-custom-element-cloudinary/issues
-[license-shield]: https://img.shields.io/github/license/Kentico/kontent-custom-element-cloudinary.svg?style=for-the-badge
-[license-url]: https://github.com/Kentico/kontent-custom-element-cloudinary/blob/master/LICENSE
+[last-commit]: https://img.shields.io/github/last-commit/kontent-ai/kontent-custom-element-cloudinary?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/kontent-ai/kontent-custom-element-cloudinary.svg?style=for-the-badge
+[contributors-url]: https://github.com/kontent-ai/kontent-custom-element-cloudinary/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/kontent-ai/kontent-custom-element-cloudinary.svg?style=for-the-badge
+[forks-url]: https://github.com/kontent-ai/kontent-custom-element-cloudinary/network/members
+[stars-shield]: https://img.shields.io/github/stars/kontent-ai/kontent-custom-element-cloudinary.svg?style=for-the-badge
+[stars-url]: https://github.com/kontent-ai/kontent-custom-element-cloudinary/stargazers
+[issues-shield]: https://img.shields.io/github/issues/kontent-ai/kontent-custom-element-cloudinary.svg?style=for-the-badge
+[issues-url]: https://github.com/kontent-ai/kontent-custom-element-cloudinary/issues
+[license-shield]: https://img.shields.io/github/license/kontent-ai/kontent-custom-element-cloudinary.svg?style=for-the-badge
+[license-url]: https://github.com/kontent-ai/kontent-custom-element-cloudinary/blob/master/LICENSE
 [core-shield]: https://img.shields.io/static/v1?label=&message=core%20integration&color=FF5733&style=for-the-badge
 [gallery-shield]: https://img.shields.io/static/v1?label=&message=extension%20gallery&color=51bce0&style=for-the-badge
 [stack-shield]: https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white&style=for-the-badge
