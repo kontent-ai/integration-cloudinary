@@ -7,13 +7,11 @@
 [![Forks][forks-shield]][forks-url]
 [![MIT License][license-shield]][license-url]
 
-[![Stack Overflow][stack-shield]](https://stackoverflow.com/tags/kentico-kontent)
-[![GitHub Discussions][discussion-shield]](https://github.com/Kentico/Home/discussions)
+[![Stack Overflow][stack-shield]](https://stackoverflow.com/tags/kontent-ai)
 
 <p align="center">
-<image src="docs/kk-logo.svg" alt="Kontent.ai logo" width="200" />
-<image src="docs/cloudinary_logo.png" 
-alt="cloudinary logo" width="400">
+<image src="docs/kai-logo-symbol-color-rgb.svg" alt="Kontent.ai logo" width="150" />
+<image src="docs/cloudinary_logo.png" alt="cloudinary logo" width="400">
 </p>
 
 <p align="center">
