@@ -1,5 +1,4 @@
 [![Core integration][core-shield]](https://kontent.ai/integrations/cloudinary)
-[![Gallery][gallery-shield]](https://kentico.github.io/kontent-custom-element-samples/gallery/)
 
 ![Last modified][last-commit]
 [![Issues][issues-shield]][issues-url]
@@ -121,7 +120,6 @@ We have collected notes on how to contribute to this project in [CONTRIBUTING.md
 
 ## Additional Resources
 
-- [Custom Element Gallery on github](https://kentico.github.io/kontent-custom-element-samples/gallery/)
 - [Kontent.ai Integration documentation](https://kontent.ai/learn/tutorials/develop-apps/integrate/integrations-overview)
 - [Custom Element documentation](https://kontent.ai/learn/tutorials/develop-apps/integrate/content-editing-extensions)
 - [Custom Element API reference](https://kontent.ai/learn/reference/custom-elements-js-api)
@@ -141,7 +139,5 @@ We have collected notes on how to contribute to this project in [CONTRIBUTING.md
 [license-shield]: https://img.shields.io/github/license/kontent-ai/kontent-custom-element-cloudinary.svg?style=for-the-badge
 [license-url]: https://github.com/kontent-ai/kontent-custom-element-cloudinary/blob/master/LICENSE
 [core-shield]: https://img.shields.io/static/v1?label=&message=core%20integration&color=FF5733&style=for-the-badge
-[gallery-shield]: https://img.shields.io/static/v1?label=&message=extension%20gallery&color=51bce0&style=for-the-badge
 [stack-shield]: https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white&style=for-the-badge
-[discussion-shield]: https://img.shields.io/badge/GitHub-Discussions-FE7A16.svg?logo=github&style=for-the-badge
 [product-demo]: docs/cloudinary.gif?raw=true
