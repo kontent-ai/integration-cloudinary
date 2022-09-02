@@ -2,6 +2,12 @@
 node_modules
 /dist
 
+# testing
+/coverage
+
+# production
+/build
+
 # local env files
 .env.local
 .env.*.local
