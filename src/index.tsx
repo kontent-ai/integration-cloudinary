@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { CloudinaryImageSelector } from "./CloudinaryImageSelector";
+import { EnsureKontentAsParent } from "./EnsureKontentAsParent";
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
@@ -11,6 +12,8 @@ if (!rootElement) {
 const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
-    <CloudinaryImageSelector />
+    <EnsureKontentAsParent>
+      <CloudinaryImageSelector />
+    </EnsureKontentAsParent>
   </React.StrictMode>
 );
