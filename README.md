@@ -16,7 +16,7 @@
 <p align="center">
   <a href="#features">Features</a> •
   <a href="#demo">Demo</a> •
-  <a href="#quick-deploy">Deploy</a> •
+  <a href="#getting-started">Getting started</a> •
   <a href="#configuring-the-custom-element">Configuration</a> •
   <a href="#what-is-saved">Saved value</a> •
   <a href="#contributors">Contributors</a> •
@@ -38,11 +38,17 @@ This [custom element](https://kontent.ai/learn/tutorials/develop-apps/integrate/
 
 ![Demo Animation][product-demo]
 
-## Quick Deploy
+## Getting started
+
+### Quick deploy
 
 Netlify has made this easy. If you click the deploy button below, it will guide you through the process of deploying it to Netlify and leave you with a copy of the repository in your account as well.
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kontent-ai/custom-element-cloudinary)
+
+### Running manually
+
+The integration is created with [Create React App](https://create-react-app.dev/). First you will need to install npm dependencies with `npm install`. Then use `npm run build` to build the integration or `npm run start` to start a local development server. See https://create-react-app.dev/docs/available-scripts for more scripts.
 
 ## Cloudinary setup
 The integration uses **[the official Media Library Widget by Cloudinary](https://cloudinary.com/documentation/media_library_widget)**. In order to access your asset library you'll need a Cloud Name and an API Key. 
