@@ -146,4 +146,4 @@ We have collected notes on how to contribute to this project in [CONTRIBUTING.md
 [license-url]: https://github.com/kontent-ai/custom-element-cloudinary/blob/master/LICENSE
 [core-shield]: https://img.shields.io/static/v1?label=&message=core%20integration&color=FF5733&style=for-the-badge
 [stack-shield]: https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white&style=for-the-badge
-[product-demo]: docs/cloudinary.gif?raw=true
+[product-demo]: docs/cloudinaryElement.gif?raw=true
