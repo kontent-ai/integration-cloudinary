@@ -53,19 +53,16 @@ The integration is created with [Create React App](https://create-react-app.dev/
 ## Cloudinary setup
 The integration uses **[the official Media Library Widget by Cloudinary](https://cloudinary.com/documentation/media_library_widget)**. In order to access your asset library you'll need a Cloud Name and an API Key. 
 
-### Getting the Cloudinary Cloud Name
-The Cloud Name can be found inside of the **Settings** section in your Cloudinary application. Under the **Account** subsection you'll find the **Cloudinary cloud name** at the bottom of the page.
-![Get Cloud Name](docs/cloudinary_setup00.png)
+### Getting the Cloudinary Cloud Name and API Key
+You can find the **cloud name** and the **API key** in the **Account details** section of the **Dashboard** in your Cloudinary application.
+![Get Cloud Name](docs/cloudinary_setup_account_details.png)
 
 
 ### Creating a new API Key
-Subsequently, you'll have to create an API key for the the widget. You'll find that option in the **Settings** section under the **Security** tab as shown on the image below.
-![Create new Api client](docs/cloudinary_setup01.png)
-At the bottom of the page you'll find a section called **Acess Keys**. There might be a key already generated for you, otherwise, you'll have to generate a new one through the **Generate New Pair**. This will create a new API Key and an API Secret, but only the Key will be neccessary for the custom element to work.
-![Create new Api client 2](docs/cloudinary_setup02.png) option.
+If you want to create a new API key, you can follow instructions in [this article](https://support.cloudinary.com/hc/en-us/articles/202520942-How-do-I-create-a-new-API-key-and-API-secret-or-remove-an-old-key-).
 
 ## Configuring the Custom Element
-The section above explains how to find values for the below mentioned parameters in the Cloudinary application. 
+The section above explains how to find values for the below-mentioned parameters in the Cloudinary application. 
 You will need to add the custom element to a content type filling in the hosted code URL and the JSON parameters as follows (*defaultTransformations* is an optional parameter):
 
 ```
