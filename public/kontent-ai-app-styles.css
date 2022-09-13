@@ -205,7 +205,7 @@ ol,ul{
   padding-left:16px;
 }
 @font-face{
-  font-family:kentico-icons;
+  font-family:kontent-ai-icons;
   font-style:normal;
   font-weight:400;
   src:url(kontent-ai-icons-v3.0.1.woff2) format("woff2");
@@ -363,7 +363,7 @@ ol,ul{
   -moz-osx-font-smoothing:grayscale;
   speak:none;
   display:inline-block;
-  font-family:kentico-icons;
+  font-family:kontent-ai-icons;
   font-size:16px;
   font-style:normal;
   font-variant:normal;
@@ -2093,7 +2093,7 @@ ol,ul{
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   speak:none;
-  font-family:kentico-icons;
+  font-family:kontent-ai-icons;
   font-size:20px;
   font-style:normal;
   font-variant:normal;
@@ -2112,7 +2112,7 @@ ol,ul{
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   speak:none;
-  font-family:kentico-icons;
+  font-family:kontent-ai-icons;
   font-size:16px;
   font-style:normal;
   font-variant:normal;
@@ -2175,7 +2175,7 @@ ol,ul{
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   speak:none;
-  font-family:kentico-icons;
+  font-family:kontent-ai-icons;
   font-size:16px;
   font-style:normal;
   font-variant:normal;
@@ -2194,7 +2194,7 @@ ol,ul{
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   speak:none;
-  font-family:kentico-icons;
+  font-family:kontent-ai-icons;
   font-size:24px;
   font-style:normal;
   font-variant:normal;
@@ -2649,7 +2649,7 @@ ol,ul{
   speak:none;
   color:#fd3030;
   content:"\e693";
-  font-family:kentico-icons;
+  font-family:kontent-ai-icons;
   font-size:16px;
   font-style:normal;
   font-variant:normal;
@@ -2886,7 +2886,7 @@ input[type=checkbox]:disabled{
   speak:none;
   color:#cd7900;
   content:"\e926";
-  font-family:kentico-icons;
+  font-family:kontent-ai-icons;
   font-size:16px;
   font-style:normal;
   font-variant:normal;
@@ -4007,7 +4007,7 @@ input[type=checkbox]:disabled{
   border-radius:4px;
   box-sizing:border-box;
   content:"";
-  font-family:kentico-icons;
+  font-family:kontent-ai-icons;
   font-size:15px;
   font-style:normal;
   font-variant:normal;
@@ -4095,7 +4095,7 @@ input[type=checkbox]:disabled{
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   speak:none;
-  font-family:kentico-icons;
+  font-family:kontent-ai-icons;
   font-size:16px;
   font-style:normal;
   font-variant:normal;
@@ -4129,7 +4129,7 @@ input[type=checkbox]:disabled{
   border-radius:4px;
   box-sizing:border-box;
   content:"";
-  font-family:kentico-icons;
+  font-family:kontent-ai-icons;
   font-size:15px;
   font-style:normal;
   font-variant:normal;
@@ -4452,7 +4452,7 @@ input:checked:disabled+.switch:before{
   color:#000;
   cursor:pointer;
   display:flex;
-  font-family:kentico-icons;
+  font-family:kontent-ai-icons;
   font-size:16px;
   font-style:normal;
   font-variant:normal;
@@ -4500,7 +4500,7 @@ input:checked:disabled+.switch:before{
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   speak:none;
-  font-family:kentico-icons;
+  font-family:kontent-ai-icons;
   font-style:normal;
   font-variant:normal;
   font-weight:400;
