@@ -10,8 +10,8 @@
 [![Discord][discord-shield]](https://discord.gg/SKCxwPtevJ)
 
 <p align="center">
-<image src="docs/kai-logo-symbol-color-rgb.svg" alt="Kontent.ai logo" width="150" />
-<image src="docs/cloudinary_logo.png" alt="cloudinary logo" width="400">
+<image src="docs/kai-logo-hor-pos-rgb.svg" alt="Kontent.ai logo" width="220" />
+<image src="docs/cloudinary_logo.png" alt="cloudinary logo" width="300">
 </p>
 
 <p align="center">
