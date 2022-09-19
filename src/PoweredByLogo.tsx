@@ -1,4 +1,4 @@
-import cloudinaryLogo from './cloudinary_logo.png'
+import cloudinaryLogo from './images/cloudinary_logo.png'
 import { FC } from "react";
 
 export const PoweredByLogo: FC = () => (
