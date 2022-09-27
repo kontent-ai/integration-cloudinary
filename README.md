@@ -12,7 +12,7 @@
 <p align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/kai-logo-hor-neg-rgb.svg">
-  <img alt="Kontent.ai logo for dark/light scheme." src="docs/kai-logo-hor-pos-rgb.svg" width="300">
+  <img alt="Kontent.ai logo for dark/light scheme." src="docs/kai-logo-hor-pos-rgb.svg" width="250">
 </picture>
 <image src="docs/cloudinary_logo.png" alt="cloudinary logo" width="300">
 </p>
@@ -67,13 +67,13 @@ If you want to create a new API key, you can follow instructions in [this articl
 
 ## Configuring the Custom Element
 The section above explains how to find values for the below-mentioned parameters in the Cloudinary application. 
-You will need to add the custom element to a content type filling in the hosted code URL and the JSON parameters as follows (*defaultTransformations* is an optional parameter):
+You will need to add the custom element to a content type filling in the hosted code URL and the JSON parameters as follows (*defaultTransformation* is an optional parameter):
 
 ```
 {
     "cloudName": "<YOUR CLOUDINARY CLOUD NAME>",
     "apiKey": "<YOUR API KEY>",
-    "defaultTransformations": "<TRANSFORMATIONS>"
+    "defaultTransformation": "<TRANSFORMATION>"
 }
 ```
 
