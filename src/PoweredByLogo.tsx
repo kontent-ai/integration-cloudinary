@@ -1,5 +1,6 @@
-import cloudinaryLogo from './images/cloudinary_logo.png'
 import { FC } from "react";
+
+import cloudinaryLogo from './images/cloudinary_logo.png'
 
 export const PoweredByLogo: FC = () => (
   <div style={{ float: 'right', padding: 10 }}>
