@@ -1,6 +1,13 @@
-import React, { FC, useCallback, useEffect, useLayoutEffect, useState } from 'react';
-import { PoweredByLogo } from "./PoweredByLogo";
+import React, {
+  FC,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useState
+} from 'react'
+
 import { AssetsPickerButton } from "./AssetsPickerButton";
+import { PoweredByLogo } from "./PoweredByLogo";
 import { SelectedImages } from "./SelectedImages";
 
 export const CloudinaryImageSelector: FC = () => {
@@ -96,7 +103,7 @@ export const CloudinaryImageSelector: FC = () => {
     if (isDisabled) {
       return;
     }
-    const newValue = currentValue?.filter(image => image.public_id !== publicId) ?? [];
+    const newValue = currentValue.filter(image => image.public_id !== publicId);
 
     updateValue(newValue);
   };
