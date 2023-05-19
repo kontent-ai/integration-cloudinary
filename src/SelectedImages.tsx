@@ -4,7 +4,7 @@ type Props = Readonly<{
   images: ReadonlyArray<CloudinaryImage>;
   isDisabled: boolean;
   removeImage: (imageId: string) => void;
-}>
+}>;
 
 export const SelectedImages: FC<Props> = props => (
   <div className="selected">
@@ -44,24 +44,25 @@ export const SelectedImages: FC<Props> = props => (
   </div>
 );
 
-SelectedImages.displayName = 'SelectedImages';
+SelectedImages.displayName = "SelectedImages";
 
-const renderImage = (image: CloudinaryImage) => image.secure_url
-  ? (
-    <a
-      href={image.secure_url}
-      target="_blank"
-      rel="noreferrer"
-    >
-      <img
-        className="asset-thumbnail__image"
-        src={image.secure_url}
-        alt={image.public_id}
-      />
-    </a>
-  )
-  : (
-    <div className="noimage">
-      No image available
-    </div>
-  )
+const renderImage = (image: CloudinaryImage) =>
+  image.secure_url
+    ? (
+      <a
+        href={image.secure_url}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          className="asset-thumbnail__image"
+          src={image.secure_url}
+          alt={image.public_id}
+        />
+      </a>
+    )
+    : (
+      <div className="noimage">
+        No image available
+      </div>
+    );

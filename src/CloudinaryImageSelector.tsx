@@ -1,10 +1,4 @@
-import React, {
-  FC,
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useState
-} from 'react'
+import { FC, useCallback, useEffect, useLayoutEffect, useState } from "react";
 
 import { AssetsPickerButton } from "./AssetsPickerButton";
 import { PoweredByLogo } from "./PoweredByLogo";
@@ -16,7 +10,6 @@ export const CloudinaryImageSelector: FC = () => {
   const [mediaLibrary, setMediaLibrary] = useState<MediaLibrary | null>(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [fixedSize, setFixedSize] = useState<number | null>(null);
-
 
   const updateValue = useCallback((newValue: ReadonlyArray<CloudinaryImage>) => {
     // send null for [] so that the element fails validation when it should not be empty
@@ -38,11 +31,11 @@ export const CloudinaryImageSelector: FC = () => {
   useEffect(() => {
     CustomElement.init((el) => {
       const { cloudName, apiKey, defaultTransformation } = el.config ?? {};
-      if (typeof cloudName !== 'string' || typeof apiKey !== 'string') {
+      if (typeof cloudName !== "string" || typeof apiKey !== "string") {
         throw new Error(`Custom element configuration must contain "cloudName" and "apiKey" keys of type string.`);
       }
       if (defaultTransformation !== undefined && !isArrayOf(isArrayOf(isObject))(defaultTransformation)) {
-        throw new Error('The "defaultTransformation" key must be of type Object[][].');
+        throw new Error("The \"defaultTransformation\" key must be of type Object[][].");
       }
 
       const settings = {
@@ -51,10 +44,10 @@ export const CloudinaryImageSelector: FC = () => {
         multiple: true,
         default_transformations: defaultTransformation,
         integration: {
-          type: 'kontentai_connector',
-          platform: 'kontent_custom_element 1.0',
-          version: '1.0',
-          environment: 'prod',
+          type: "kontentai_connector",
+          platform: "kontent_custom_element 1.0",
+          version: "1.0",
+          environment: "prod",
         },
       };
 
@@ -70,12 +63,12 @@ export const CloudinaryImageSelector: FC = () => {
           hideHandler() {
             updateSize();
           },
-        }
+        },
       );
 
       setMediaLibrary(newMediaLibrary);
 
-      setCurrentValue(JSON.parse(el.value || '[]'));
+      setCurrentValue(JSON.parse(el.value || "[]"));
       setIsDisabled(el.disabled);
     });
   }, [updateSize, updateValue]);
@@ -91,8 +84,8 @@ export const CloudinaryImageSelector: FC = () => {
         updateSize();
       }
     };
-    window.addEventListener('resize', listener);
-    return () => window.removeEventListener('resize', listener);
+    window.addEventListener("resize", listener);
+    return () => window.removeEventListener("resize", listener);
   }, [updateSize, windowWidth, fixedSize]);
 
   if (currentValue === null) {
@@ -126,10 +119,9 @@ export const CloudinaryImageSelector: FC = () => {
   );
 };
 
-CloudinaryImageSelector.displayName = 'CloudinaryImageSelector';
+CloudinaryImageSelector.displayName = "CloudinaryImageSelector";
 
 const isArrayOf = <T extends unknown>(guard: (element: unknown) => element is T) => (arr: unknown): arr is T[] =>
   Array.isArray(arr) && arr.every(guard);
 
-const isObject = (input: unknown): input is Record<PropertyKey, unknown> =>
-  typeof input === 'object' && input !== null;
+const isObject = (input: unknown): input is Record<PropertyKey, unknown> => typeof input === "object" && input !== null;

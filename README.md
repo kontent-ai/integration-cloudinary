@@ -36,7 +36,6 @@ This [custom element](https://kontent.ai/learn/tutorials/develop-apps/integrate/
   - Search for assets in their Cloudinary Asset Library
   - Link selected assets with their content items with preview directly inside of the Kontent.ai editor
   - Upload & Manage assets directly through the widget from the Kontent.ai editor
-  
 
 ## Demo
 
@@ -55,19 +54,22 @@ Netlify has made this easy. If you click the deploy button below, it will guide 
 The integration is created with [Create React App](https://create-react-app.dev/). First you will need to install npm dependencies with `npm install`. Then use `npm run build` to build the integration or `npm run start` to start a local development server. See https://create-react-app.dev/docs/available-scripts for more scripts.
 
 ## Cloudinary setup
-The integration uses **[the official Media Library Widget by Cloudinary](https://cloudinary.com/documentation/media_library_widget)**. In order to access your asset library you'll need a Cloud Name and an API Key. 
+
+The integration uses **[the official Media Library Widget by Cloudinary](https://cloudinary.com/documentation/media_library_widget)**. In order to access your asset library you'll need a Cloud Name and an API Key.
 
 ### Getting the Cloudinary Cloud Name and API Key
+
 You can find the **cloud name** and the **API key** in the **Account details** section of the **Dashboard** in your Cloudinary application.
 ![Get Cloud Name](docs/cloudinary_setup_account_details.png)
 
-
 ### Creating a new API Key
+
 If you want to create a new API key, you can follow instructions in [this article](https://support.cloudinary.com/hc/en-us/articles/202520942-How-do-I-create-a-new-API-key-and-API-secret-or-remove-an-old-key-).
 
 ## Configuring the Custom Element
-The section above explains how to find values for the below-mentioned parameters in the Cloudinary application. 
-You will need to add the custom element to a content type filling in the hosted code URL and the JSON parameters as follows (*defaultTransformation* is an optional parameter):
+
+The section above explains how to find values for the below-mentioned parameters in the Cloudinary application.
+You will need to add the custom element to a content type filling in the hosted code URL and the JSON parameters as follows (_defaultTransformation_ is an optional parameter):
 
 ```
 {
@@ -78,11 +80,13 @@ You will need to add the custom element to a content type filling in the hosted 
 ```
 
 ## What is Saved
+
 Assets selected from Cloudinary are saved as an array of objects into the value of the custom element. This is also the format they will be delivered as through the Kontent.ai Delivery API.
 
 More details about the individual properties can be found [in the official Cloudinary documentation](https://cloudinary.com/documentation/media_library_widget).
 
 Example custom element value:
+
 ```
 {
   assets: [
@@ -113,6 +117,7 @@ Example custom element value:
 ```
 
 ## Contributors
+
 This custom element was originally created by <a href="https://www.truelime.nl/">TrueLime</a>.
 
 <a href="https://github.com/kontent-ai/integration-cloudinary/graphs/contributors">
@@ -130,9 +135,6 @@ We have collected notes on how to contribute to this project in [CONTRIBUTING.md
 - [Kontent.ai Integration documentation](https://kontent.ai/learn/tutorials/develop-apps/integrate/integrations-overview)
 - [Custom Element documentation](https://kontent.ai/learn/tutorials/develop-apps/integrate/content-editing-extensions)
 - [Custom Element API reference](https://kontent.ai/learn/reference/custom-elements-js-api)
-
-
-
 
 [last-commit]: https://img.shields.io/github/last-commit/kontent-ai/integration-cloudinary?style=for-the-badge
 [contributors-shield]: https://img.shields.io/github/contributors/kontent-ai/integration-cloudinary.svg?style=for-the-badge
