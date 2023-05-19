@@ -30,7 +30,11 @@ type CreateMediaLibraryCallbacks = Readonly<{
 }>;
 
 type CloudinaryMediaLibraryCreator = {
-  readonly createMediaLibrary: (settings: CreateMediaLibrarySetting, callbacks: CreateMediaLibraryCallbacks, buttonSelector?: string) => MediaLibrary;
+  readonly createMediaLibrary: (
+    settings: CreateMediaLibrarySetting,
+    callbacks: CreateMediaLibraryCallbacks,
+    buttonSelector?: string,
+  ) => MediaLibrary;
 };
 
 type MediaLibrary = Readonly<{

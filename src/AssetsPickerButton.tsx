@@ -17,4 +17,4 @@ export const AssetsPickerButton: FC<Props> = props => (
   </div>
 );
 
-AssetsPickerButton.displayName = 'AssetsPickerButton';
+AssetsPickerButton.displayName = "AssetsPickerButton";
