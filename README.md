@@ -51,7 +51,7 @@ Netlify has made this easy. If you click the deploy button below, it will guide 
 
 ### Running manually
 
-The integration is created with [Create React App](https://create-react-app.dev/). First you will need to install npm dependencies with `npm install`. Then use `npm run build` to build the integration or `npm run start` to start a local development server. See https://create-react-app.dev/docs/available-scripts for more scripts.
+The integration is created with [Vite](https://vitejs.dev/). First you will need to install npm dependencies with `npm ci`. Then use `npm run build` to build the integration or `npm run dev` to start a local development server.
 
 ## Cloudinary setup
 
