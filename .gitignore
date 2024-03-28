@@ -1,12 +1,12 @@
 .DS_Store
 node_modules
-/dist
 
 # testing
 /coverage
 
 # production
-/build
+dist
+dist-ssr
 
 # local env files
 .env.local
